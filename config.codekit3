@@ -9,10 +9,12 @@
 	],
 "creatorBuild": "31934",
 "files": {
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
+	"/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/build/index.html",
 		"oF": 0
 		},
 	"/README.md": {
@@ -42,7 +44,7 @@
 		"oAP": "/build/index.html",
 		"oF": 0
 		},
-	"/source/stylesheet/main.scss": {
+	"/source/stylesheets/main.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -50,7 +52,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/build/stylesheet/main.css",
+		"oAP": "/build/stylesheets/main.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -66,7 +68,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets-peach",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 594364561.970016
+	"lastBuiltDate": 594365744.09712803
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

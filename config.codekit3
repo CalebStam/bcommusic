@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -35,6 +41,19 @@
 		"oA": 0,
 		"oAP": "/build/index.html",
 		"oF": 0
+		},
+	"/source/stylesheet/main.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/build/stylesheet/main.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		}
 	},
 "hooks": [

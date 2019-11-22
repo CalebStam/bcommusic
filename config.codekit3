@@ -9,12 +9,10 @@
 	],
 "creatorBuild": "31934",
 "files": {
-	"/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/build/index.html",
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
 		"oF": 0
 		},
 	"/README.md": {
@@ -68,7 +66,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets-peach",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 594365744.09712803
+	"lastBuiltDate": 596148263.11328602
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

@@ -4,6 +4,13 @@
 
 body {
     font-family: 'Raleway', sans-serif;
+
+    .row {
+
+        .col {
+            padding: 0;
+        }
+    }
 }
 
 h1,
@@ -14,6 +21,7 @@ h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    color: #444;
 }
 
 /**********
@@ -21,23 +29,31 @@ h6 {
 **********/
 
 #sidenav {
-    height: 100vh;
     margin: 0;
     padding: 30px 30px 0px 30px;
 
+    input {
+        border: none;
+    }
+
+    #logo {
+        width: 25%;
+    }
+
     .btn,
     .btn-large {
-        color: #333;
+        color: #444;
         background-color: #eaeaea;
         width: 100%;
         box-shadow: none !important;
         border-radius: 10px;
+        font-family: "Montserrat", sans-serif;
         font-weight: bold;
         transition: none;
 
         &:hover {
             color: white;
-            background-color: #333;
+            background-color: #444;
             transition: none;
         }
     }
@@ -46,12 +62,475 @@ h6 {
         border: none;
 
         .chip {
-            color: #333;
-            background-color: #eaeaea;
+            color: #444;
+            background-color: white;
+            border: solid 2px #eaeaea;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border-radius: 7px;
 
-            &.active {
-                color: white;
-                background-color: #333;
+            &:hover {
+                background-color: #eaeaea;
+            }
+        }
+    }
+}
+
+/*******
+  MAIN
+*******/
+
+#mainContent {
+    padding: 20px 0 0 0;
+
+    h4 {
+        margin-left: 30px;
+    }
+
+    .song-container {
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .song-inner-container {
+
+            .card {
+                display: inline-block;
+                border-radius: 9px;
+                margin-left: 10px;
+                -webkit-box-shadow: 0px 5px 25px -15px rgba(68, 68, 68, 1);
+                -moz-box-shadow: 0px 5px 25px -15px rgba(68, 68, 68, 1);
+                box-shadow: 0px 5px 25px -15px rgba(68, 68, 68, 1);
+
+                .card-image {
+
+                    img {
+                        border-top-left-radius: 9px;
+                        border-top-right-radius: 9px;
+                    }
+                }
+
+                .card-content {
+
+                    .card-title {
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: bold;
+                        color: #444;
+                        font-size: 1.2rem;
+                    }
+
+                    .chip {
+                        color: #444;
+                        background-color: #eaeaea;
+                        width: auto;
+                        text-align: center;
+                        border-radius: 7px;
+
+                        &:hover {
+                            color: white;
+                            background-color: #333;
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    margin-left: 30px;
+                }
+
+                &:nth-last-child(1) {
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+/********************************
+  RESPONSIVE DESIGN BREAKPOINTS
+********************************/
+
+// iPhone SE Portrait
+@media only screen and (max-width: 374px) {
+
+    #sidenav {
+
+        #logo {
+            width: 90px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 47%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 80%;
+            }
+        }
+    }
+}
+
+// iPhone 6/7/8 Portrait
+@media only screen and (min-width: 375px) and (max-width: 413px) {
+
+    #sidenav {
+
+        #logo {
+            width: 90px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 47%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 70%;
+            }
+        }
+    }
+}
+
+// iPhone 6+/7+/8+ Portrait
+@media only screen and (min-width: 414px) and (max-width: 567px) {
+
+    #sidenav {
+
+        #logo {
+            width: 90px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 47%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 60%;
+            }
+        }
+    }
+}
+
+// iPhone SE Landscape
+@media only screen and (min-width: 568px) and (max-width: 666px) {
+
+    #sidenav {
+
+        #logo {
+            width: 110px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 31%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 30%;
+            }
+        }
+    }
+}
+
+// iPhone 6/7/8 Landscape
+@media only screen and (min-width: 667px) and (max-width: 735px) {
+
+    #sidenav {
+
+        #logo {
+            width: 110px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 31%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 30%;
+            }
+        }
+    }
+}
+
+// iPhone 6+/7+/8+ Landscape
+@media only screen and (min-width: 736px) and (max-width: 767px) {
+
+    #sidenav {
+
+        #logo {
+            width: 110px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 31%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 30%;
+            }
+        }
+    }
+}
+
+// iPad Mini/iPad Portrait
+@media only screen and (min-width: 768px) and (max-width: 833px) {
+
+    #sidenav {
+
+        #logo {
+            width: 110px;
+        }
+
+        .chips {
+
+            .chip {
+                width: 23%;
+            }
+        }
+    }
+
+    #mainContent {
+
+        .song-container {
+
+            .card {
+                width: 35%;
+            }
+        }
+    }
+}
+
+// iPad Pro 10.5" Portrait
+@media only screen and (min-width: 834px) and (max-width: 1023px) {
+
+    #sidenav {
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+
+        #logo {
+            width: 75px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chips {
+
+            .chip {
+                width: 46%;
+            }
+        }
+    }
+
+    #mainContent {
+        margin-left: 300px;
+
+        .song-container {
+
+            .card {
+                width: 35%;
+            }
+        }
+    }
+}
+
+// iPad Mini/iPad Landscape, iPad Pro 12.9" Portrait
+@media only screen and (min-width: 1024px) and (max-width: 1111px) {
+
+    #sidenav {
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+
+        #logo {
+            width: 75px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chips {
+
+            .chip {
+                width: 46%;
+            }
+        }
+    }
+
+    #mainContent {
+        margin-left: 30%;
+
+        .song-container {
+
+            .card {
+                width: 35%;
+            }
+        }
+    }
+}
+
+// iPad Pro 10.5" Landscape
+@media only screen and (min-width: 1112px) and (max-width: 1365px) {
+
+    #sidenav {
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+
+        #logo {
+            width: 75px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chips {
+
+            .chip {
+                width: 46%;
+            }
+        }
+    }
+
+    #mainContent {
+        margin-left: 300px;
+
+        .song-container {
+
+            .card {
+                width: 35%;
+            }
+        }
+    }
+}
+
+// iPad Pro 12.9" Landscape
+@media only screen and (min-width: 1366px) and (max-width: 1919px) {
+
+    #sidenav {
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+
+        #logo {
+            width: 75px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chips {
+
+            .chip {
+                width: 31%;
+            }
+        }
+    }
+
+    #mainContent {
+        margin-left: 30%;
+
+        .song-container {
+
+            .card {
+                width: 20%;
+            }
+        }
+    }
+}
+
+// Medium Web
+@media only screen and (min-width: 1920px) {
+
+    #sidenav {
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 500px;
+        height: 100%;
+
+        #logo {
+            width: 75px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .chips {
+
+            .chip {
+                width: 31%;
+            }
+        }
+    }
+
+    #mainContent {
+        margin-left: 500px;
+
+        .song-container {
+
+            .card {
+                width: 20%;
             }
         }
     }

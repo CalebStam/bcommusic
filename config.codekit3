@@ -9,6 +9,12 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/build": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/build",
+		"oF": 0
+		},
 	"/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -27,6 +33,17 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"/source/data/images/logo.png": {
+		"ft": 32768,
+		"iS": 159880,
+		"oA": 0,
+		"oAP": "/build/data/images/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
 		},
 	"/source/dbConnect.php": {
 		"cB": 0,

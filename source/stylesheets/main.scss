@@ -1,27 +1,18 @@
-/********
-  FONTS
-********/
+/****************
+  SHARED STYLES
+****************/
 
 body {
-    font-family: 'Raleway', sans-serif;
-
-    .row {
-
-        .col {
-            padding: 0;
-        }
-    }
+  color: #444;
+  margin: 0;
+  padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #444;
+.label {
+  color: #444;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
 }
 
 /**********
@@ -29,52 +20,76 @@ h6 {
 **********/
 
 #sidenav {
-    margin: 0;
-    padding: 30px 30px 0px 30px;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 100%;
+  -webkit-box-shadow: 10px 0px 30px -14px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 10px 0px 30px -14px rgba(204, 204, 204, 1);
+  box-shadow: 10px 0px 30px -14px rgba(204, 204, 204, 1);
 
-    input {
-        border: none;
-    }
+  form {
+    margin: 20px;
 
     #logo {
-        width: 25%;
+      color: #444;
+      font-size: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      text-decoration: none;
     }
 
-    .btn,
-    .btn-large {
+    .buttons {
+      width: 100%;
+      height: 120px;
+      margin: 10px 0 30px 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+
+      a {
+        height: auto;
+        width: 75px;
         color: #444;
-        background-color: #eaeaea;
-        width: 100%;
-        box-shadow: none !important;
-        border-radius: 10px;
+        background-color: #fff;
+        border: 2px solid #eaeaea;
+        border-radius: 7px;
+        padding: 8px 5px 8px 5px;
         font-family: "Montserrat", sans-serif;
-        font-weight: bold;
-        transition: none;
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
 
         &:hover {
-            color: white;
-            background-color: #444;
-            transition: none;
+          background-color: #eaeaea;
         }
+      }
     }
 
-    .chips {
-        border: none;
+    .button-large {
+      color: #444;
+      background-color: #eaeaea;
+      border: none;
+      border-radius: 7px;
+      width: 280px;
+      padding: 15px 0 15px 0;
+      margin: 20px 0 20px 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
 
-        .chip {
-            color: #444;
-            background-color: white;
-            border: solid 2px #eaeaea;
-            width: 100%;
-            height: auto;
-            text-align: center;
-            border-radius: 7px;
-
-            &:hover {
-                background-color: #eaeaea;
-            }
-        }
+      &:hover {
+        color: #eaeaea;
+        background-color: #444;
+      }
     }
+  }
 }
 
 /*******
@@ -82,514 +97,96 @@ h6 {
 *******/
 
 #mainContent {
-    padding: 20px 0 0 0;
+  margin: 0 0 0 320px;
+  padding: none;
 
-    h4 {
-        margin-left: 30px;
+  .label {
+    margin: 20px 0 0 20px;
+  }
+
+  .h-scrolling-container {
+    margin: 20px 0 0 0;
+    padding: 0 0 0 20px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    .song-container {
-        white-space: nowrap;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
+    .h-scrolling-container-inner {
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+      .song {
+        width: 250px;
+        height: auto;
+        margin: 0 15px 30px 0;
+        border-radius: 7px;
+        display: inline-block;
+        -webkit-box-shadow: 0px 10px 29px -10px rgba(204, 204, 204, 1);
+        -moz-box-shadow: 0px 10px 29px -10px rgba(204, 204, 204, 1);
+        box-shadow: 0px 10px 29px -10px rgba(204, 204, 204, 1);
 
-        .song-inner-container {
+        .flex-container {
+          display: flex;
+          flex-flow: column wrap;
 
-            .card {
-                display: inline-block;
-                border-radius: 9px;
-                margin-left: 10px;
-                -webkit-box-shadow: 0px 5px 25px -15px rgba(68, 68, 68, 1);
-                -moz-box-shadow: 0px 5px 25px -15px rgba(68, 68, 68, 1);
-                box-shadow: 0px 5px 25px -15px rgba(68, 68, 68, 1);
+          .album-art {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+          }
 
-                .card-image {
+          .song-title {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin: 20px 20px 0 20px;
+          }
 
-                    img {
-                        border-top-left-radius: 9px;
-                        border-top-right-radius: 9px;
-                    }
-                }
+          .song-artist {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 200;
+            font-size: 0.75rem;
+            margin: 0 20px 20px 20px;
+          }
 
-                .card-content {
+          .song-tags {
+            width: auto;
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 20px 20px 20px;
+            align-items: baseline;
+            justify-content: space-between;
 
-                    .card-title {
-                        font-family: "Montserrat", sans-serif;
-                        font-weight: bold;
-                        color: #444;
-                        font-size: 1.2rem;
-                    }
+            .tag {
+              height: auto;
+              width: 101px;
+              color: #444;
+              background-color: #eaeaea;
+              border-radius: 100px;
+              padding: 5px 0;
+              margin: 5px 0;
+              font-family: "Montserrat", sans-serif;
+              font-weight: 700;
+              font-size: 0.75rem;
+              text-decoration: none;
+              text-align: center;
+              cursor: pointer;
 
-                    .chip {
-                        color: #444;
-                        background-color: #eaeaea;
-                        width: auto;
-                        text-align: center;
-                        border-radius: 7px;
+              &:first-child {
+                margin-top: 0;
+              }
 
-                        &:hover {
-                            color: white;
-                            background-color: #333;
-                        }
-                    }
-                }
-
-                &:nth-child(1) {
-                    margin-left: 30px;
-                }
-
-                &:nth-last-child(1) {
-                    margin-right: 30px;
-                }
+              &:last-child {
+                margin-bottom: 0;
+              }
             }
+          }
         }
+      }
     }
-}
-
-/********************************
-  RESPONSIVE DESIGN BREAKPOINTS
-********************************/
-
-// iPhone SE Portrait
-@media only screen and (max-width: 374px) {
-
-    #sidenav {
-
-        #logo {
-            width: 90px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 47%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 80%;
-            }
-        }
-    }
-}
-
-// iPhone 6/7/8 Portrait
-@media only screen and (min-width: 375px) and (max-width: 413px) {
-
-    #sidenav {
-
-        #logo {
-            width: 90px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 47%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 70%;
-            }
-        }
-    }
-}
-
-// iPhone 6+/7+/8+ Portrait
-@media only screen and (min-width: 414px) and (max-width: 567px) {
-
-    #sidenav {
-
-        #logo {
-            width: 90px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 47%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 60%;
-            }
-        }
-    }
-}
-
-// iPhone SE Landscape
-@media only screen and (min-width: 568px) and (max-width: 666px) {
-
-    #sidenav {
-
-        #logo {
-            width: 110px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 31%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 30%;
-            }
-        }
-    }
-}
-
-// iPhone 6/7/8 Landscape
-@media only screen and (min-width: 667px) and (max-width: 735px) {
-
-    #sidenav {
-
-        #logo {
-            width: 110px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 31%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 30%;
-            }
-        }
-    }
-}
-
-// iPhone 6+/7+/8+ Landscape
-@media only screen and (min-width: 736px) and (max-width: 767px) {
-
-    #sidenav {
-
-        #logo {
-            width: 110px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 31%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 30%;
-            }
-        }
-    }
-}
-
-// iPad Mini/iPad Portrait
-@media only screen and (min-width: 768px) and (max-width: 833px) {
-
-    #sidenav {
-
-        #logo {
-            width: 110px;
-        }
-
-        .chips {
-
-            .chip {
-                width: 23%;
-            }
-        }
-    }
-
-    #mainContent {
-
-        .song-container {
-
-            .card {
-                width: 35%;
-            }
-        }
-    }
-}
-
-// iPad Pro 10.5" Portrait
-@media only screen and (min-width: 834px) and (max-width: 1023px) {
-
-    #sidenav {
-        z-index: 99;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 100%;
-
-        #logo {
-            width: 75px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .chips {
-
-            .chip {
-                width: 46%;
-            }
-        }
-    }
-
-    #mainContent {
-        margin-left: 300px;
-
-        .song-container {
-
-            .card {
-                width: 35%;
-            }
-        }
-    }
-}
-
-// iPad Mini/iPad Landscape, iPad Pro 12.9" Portrait
-@media only screen and (min-width: 1024px) and (max-width: 1111px) {
-
-    #sidenav {
-        z-index: 99;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 30%;
-        height: 100%;
-
-        #logo {
-            width: 75px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .chips {
-
-            .chip {
-                width: 46%;
-            }
-        }
-    }
-
-    #mainContent {
-        margin-left: 30%;
-
-        .song-container {
-
-            .card {
-                width: 35%;
-            }
-        }
-    }
-}
-
-// iPad Pro 10.5" Landscape
-@media only screen and (min-width: 1112px) and (max-width: 1365px) {
-
-    #sidenav {
-        z-index: 99;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 100%;
-
-        #logo {
-            width: 75px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .chips {
-
-            .chip {
-                width: 46%;
-            }
-        }
-    }
-
-    #mainContent {
-        margin-left: 300px;
-
-        .song-container {
-
-            .card {
-                width: 35%;
-            }
-        }
-    }
-}
-
-// iPad Pro 12.9" Landscape
-@media only screen and (min-width: 1366px) and (max-width: 1919px) {
-
-    #sidenav {
-        z-index: 99;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 30%;
-        height: 100%;
-
-        #logo {
-            width: 75px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .chips {
-
-            .chip {
-                width: 31%;
-            }
-        }
-    }
-
-    #mainContent {
-        margin-left: 30%;
-
-        .song-container {
-
-            .card {
-                width: 20%;
-            }
-        }
-    }
-}
-
-// Medium Web
-@media only screen and (min-width: 1920px) {
-
-    #sidenav {
-        z-index: 99;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 500px;
-        height: 100%;
-
-        #logo {
-            width: 75px;
-            padding: 0;
-            margin: 0;
-        }
-
-        .chips {
-
-            .chip {
-                width: 31%;
-            }
-        }
-    }
-
-    #mainContent {
-        margin-left: 500px;
-
-        .song-container {
-
-            .card {
-                width: 20%;
-            }
-        }
-    }
-}
-
-/**********
-  SPACERS
-**********/
-
-.spacer-sm {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-}
-
-.spacer-sm.plus-sides {
-    padding-left: 5vh;
-    padding-right: 5vh;
-}
-
-.spacer-top-sm {
-    padding-top: 5vh;
-}
-
-.spacer-bottom-sm {
-    padding-bottom: 5vh;
-}
-
-.spacer-md {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-}
-
-.spacer-md.plus-sides {
-    padding-left: 10vh;
-    padding-right: 10vh;
-}
-
-.spacer-top-md {
-    padding-top: 10vh;
-}
-
-.spacer-bottom-md {
-    padding-bottom: 10vh;
-}
-
-.spacer-lg {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-}
-
-.spacer-lg.plus-sides {
-    padding-left: 15vh;
-    padding-right: 15vh;
-}
-
-.spacer-top-lg {
-    padding-top: 15vh;
-}
-
-.spacer-bottom-lg {
-    padding-bottom: 15vh;
+  }
 }

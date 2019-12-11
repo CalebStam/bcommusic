@@ -14,312 +14,200 @@ require_once 'dbConnect.php';
 
 <head>
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Import fonts from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Raleway&display=swap" rel="stylesheet">
-    <!-- Import CSS framework from MaterializeCSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Import main stylesheet -->
-    <link rel="stylesheet" href="stylesheets/main.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import fonts from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,700|Raleway&display=swap" rel="stylesheet">
+  <!-- Import main stylesheet -->
+  <link rel="stylesheet" href="stylesheets/main.css">
 
-    <meta charset="utf-8">
-    <!-- Meta tag stating site is optimized for mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!-- Meta tag stating site is optimized for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Find New Music - Bcom Music</title>
+  <title>Find New Music - Bcom Music</title>
 
 </head>
 
 <body>
 
-    <!-- Sorted by date added, display all information that pertains to the query -->
-    <div class="row">
-        <!--Sidenav-->
-        <div class="z-depth-3" id="sidenav">
-            <div class="row">
-                <form class="col s12" method="post" action="#">
-                    <div class="row">
-                        <div class="col s12">
-                            <img src="data/images/logo.png" class="responsive-img" id="logo">
-                        </div>
-                        <div class="col s12">
-                            <h5>Genre</h5>
-                            <div class="chips" id="genreTags">
-                                <a href="#!" class="chip">
-                                    Jazz
-                                </a>
-                                <a href="#!" class="chip">
-                                    Electronic
-                                </a>
-                                <a href="#!" class="chip">
-                                    Rock
-                                </a>
-                                <a href="#!" class="chip">
-                                    Jazz
-                                </a>
-                                <a href="#!" class="chip">
-                                    Electronic
-                                </a>
-                                <a href="#!" class="chip">
-                                    Rock
-                                </a>
-                                <a href="#!" class="chip">
-                                    Jazz
-                                </a>
-                                <a href="#!" class="chip">
-                                    Electronic
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <h5>Mood</h5>
-                            <div class="chips" id="genreTags">
-                                <a href="#!" class="chip">
-                                    Calm
-                                </a>
-                                <a href="#!" class="chip">
-                                    Energetic
-                                </a>
-                                <a href="#!" class="chip">
-                                    Happy
-                                </a>
-                                <a href="#!" class="chip">
-                                    Calm
-                                </a>
-                                <a href="#!" class="chip">
-                                    Energetic
-                                </a>
-                                <a href="#!" class="chip">
-                                    Happy
-                                </a>
-                                <a href="#!" class="chip">
-                                    Calm
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <input type="submit" class="btn-large" value="search">
-                        </div>
-                    </div>
-                </form>
-            </div>
+  <!-- Sorted by date added, display all information that pertains to the query -->
+
+  <!-- Sidenav -->
+  <div id="sidenav">
+    <form method="post" action="#">
+      <h1><a id="logo" href="http://bcommusic.com">Bcom Music</a></h1>
+      <span class="label">Genre</span>
+      <div class="buttons">
+        <a href="#!">Alt</a>
+        <a href="#!">Classical</a>
+        <a href="#!">Electronic</a>
+        <a href="#!">Jazz</a>
+        <a href="#!">Hip-Hop</a>
+        <a href="#!">Metal</a>
+        <a href="#!">Pop</a>
+        <a href="#!">Rock</a>
+        <a href="#!">Random</a>
+      </div>
+      <span class="label">Mood</span>
+      <div class="buttons">
+        <a href="#!">Calm</a>
+        <a href="#!">Energetic</a>
+        <a href="#!">Chill</a>
+        <a href="#!">Happy</a>
+        <a href="#!">Sad</a>
+        <a href="#!">Heavy</a>
+        <a href="#!">Weird</a>
+        <a href="#!">No Vocals</a>
+        <a href="#!">Random</a>
+      </div>
+      <input type="submit" class="button-large" value="Find Music">
+    </form>
+  </div>
+
+  <!-- Main content -->
+  <div id="mainContent">
+    <div class="label">Results</div>
+    <div class="h-scrolling-container">
+      <div class="h-scrolling-container-inner">
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
         </div>
 
-        <!--Main content-->
-        <div id="mainContent">
-            <div class="row">
-                <div class="col s12">
-                    <h4>Results</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="song-container">
-                        <div class="song-inner-container">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/1656b10152c87a0aa9b0b797abe0d54158d77043" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Blew Me</span>
-                                    <p class="truncate">Galdive, Osvaldorio &amp; Wiana</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://guitargirlmag.com/wp-content/uploads/2017/08/Lights-Skin-Earth-Album-Cover.jpg" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Fight Club</span>
-                                    <p class="truncate">LIGHTS</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/19b7667aa480b65661b3da6478e99e86d00e72f2" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Drip</span>
-                                    <p class="truncate">EVAN GIIA</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/1656b10152c87a0aa9b0b797abe0d54158d77043" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Blew Me</span>
-                                    <p class="truncate">Galdive, Osvaldorio &amp; Wiana</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://guitargirlmag.com/wp-content/uploads/2017/08/Lights-Skin-Earth-Album-Cover.jpg" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Fight Club</span>
-                                    <p class="truncate">LIGHTS</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/19b7667aa480b65661b3da6478e99e86d00e72f2" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Drip</span>
-                                    <p class="truncate">EVAN GIIA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <h4>Recently Added</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="song-container">
-                        <div class="song-inner-container">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/1656b10152c87a0aa9b0b797abe0d54158d77043" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Blew Me</span>
-                                    <p class="truncate">Galdive, Osvaldorio &amp; Wiana</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://guitargirlmag.com/wp-content/uploads/2017/08/Lights-Skin-Earth-Album-Cover.jpg" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Fight Club</span>
-                                    <p class="truncate">LIGHTS</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/19b7667aa480b65661b3da6478e99e86d00e72f2" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Drip</span>
-                                    <p class="truncate">EVAN GIIA</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/1656b10152c87a0aa9b0b797abe0d54158d77043" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Blew Me</span>
-                                    <p class="truncate">Galdive, Osvaldorio &amp; Wiana</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://guitargirlmag.com/wp-content/uploads/2017/08/Lights-Skin-Earth-Album-Cover.jpg" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Fight Club</span>
-                                    <p class="truncate">LIGHTS</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/19b7667aa480b65661b3da6478e99e86d00e72f2" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Drip</span>
-                                    <p class="truncate">EVAN GIIA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <h4>Most Popular</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="song-container">
-                        <div class="song-inner-container">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/1656b10152c87a0aa9b0b797abe0d54158d77043" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Blew Me</span>
-                                    <p class="truncate">Galdive, Osvaldorio &amp; Wiana</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://guitargirlmag.com/wp-content/uploads/2017/08/Lights-Skin-Earth-Album-Cover.jpg" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Fight Club</span>
-                                    <p class="truncate">LIGHTS</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/19b7667aa480b65661b3da6478e99e86d00e72f2" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Drip</span>
-                                    <p class="truncate">EVAN GIIA</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/1656b10152c87a0aa9b0b797abe0d54158d77043" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Blew Me</span>
-                                    <p class="truncate">Galdive, Osvaldorio &amp; Wiana</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://guitargirlmag.com/wp-content/uploads/2017/08/Lights-Skin-Earth-Album-Cover.jpg" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Fight Club</span>
-                                    <p class="truncate">LIGHTS</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="https://i.scdn.co/image/19b7667aa480b65661b3da6478e99e86d00e72f2" class="responsive-img">
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title truncate">Drip</span>
-                                    <p class="truncate">EVAN GIIA</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
         </div>
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+        <div class="song">
+          <div class="flex-container">
+            <img src="https://images.complex.com/complex/image/upload/t_article_image/leadflora_yisbdu.jpg" class="album-art" alt="Album Art">
+            <span class="song-title">Drift</span>
+            <span class="song-artist">Alinba Baraz, Galimatias</span>
+            <span class="song-tags">
+              <a class="tag">Electronic</a>
+              <a class="tag">Jazz</a>
+              <a class="tag">Energetic</a>
+              <a class="tag">Chill</a>
+              <a class="tag">Calm</a>
+            </span>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-
-
-    <!-- Import JavaScript framework from MaterializeCSS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </div>
 </body>
 
 </html>

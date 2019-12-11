@@ -101,12 +101,13 @@ body {
   padding: none;
 
   .label {
-    margin: 20px 0 0 20px;
+    font-size: 1rem;
+    margin: 40px 0 0 30px;
   }
 
   .h-scrolling-container {
     margin: 20px 0 0 0;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 30px;
     white-space: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -187,6 +188,29 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+@media all and (max-width: 640px) {
+  #sidenav {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 320px;
+    height: auto;
+    margin: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: none;
+  }
+
+  #mainContent {
+    margin: 0;
+
+    .h-scrolling-container {
+
+      padding: none;
     }
   }
 }
